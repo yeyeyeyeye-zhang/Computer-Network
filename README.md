@@ -15,3 +15,26 @@ An independent programming exploration based on the Computer Network course of N
 ### 3.lab3-2
 
  Based on lab3-1, change the flow control mechanism to a sliding window-based flow control and implement cumulative acknowledgment. 在lab3-1基础上，将流量机制改为基于滑动窗口的流量控制，实现累积确认。
+
+## 代码架构
+
+lab3 Project Root/
+├── include/
+│   ├── Datagram.h    // 定义 Datagram 结构体及其成员函数声明
+│   ├── Sender.h      // 声明 Sender 类
+│   └── Receiver.h    // 声明 Receiver 类
+│
+├── src/
+│   ├── Datagram.cpp   // 实现 Datagram 结构体的成员函数
+│   ├── Sender.cpp     // 实现 Sender 类
+│   ├── Receiver.cpp   // 实现 Receiver 类
+│   └── main.cpp       // 包含 main 函数，负责启动程序
+
+## 运行命令
+
+进入src目录下，输入：
+
+```
+ g++ -o cs main.cpp Datagram.cpp Sender.cpp Receiver.cpp -lws2_32
+```
+
